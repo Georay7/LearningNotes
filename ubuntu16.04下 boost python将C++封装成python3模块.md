@@ -71,7 +71,7 @@ g++ -fpic -c hello.cpp $(pkg-config --cflags python3)
 #生成.so工作文件
 g++ -shared -o hello.so hello.o -lboost_python35 $(pkg-config --cflags --libs python3)
 ```
-
+(tips:项目中所有相关源文件都需要生成相应的.o .so文件！！！-->链接作用)
 上面的两行编译命令中，有两个编译参数可能是需要根据具体版本做调整的，一个是pkg-config库管理工具中的python3，这个名称和版本号可以检查相应配置文件，$(pkg-config --cflags python3)即自动获取相应的信息
 
 　　另外一个是第二行命令中的-lboost_python35，这个检查已经安装的库版本来决定，比如-lboost_python35对应需要有libboost_python35.dylib文件，特别注意这个版本同将来运行的python环境版本必须精确一致，小版本也必须相同：

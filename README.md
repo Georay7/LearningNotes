@@ -10,3 +10,5 @@ It's my learning note including RL, Python, and everything.
 4、python中os.path.isdir()和os.path.isfile()的正确用法；
 
 5、win10+python3.6+vs2015+boost实现c++封装成python模块方法；
+
+6、本地pycharm调用远程服务器开发配置说明；

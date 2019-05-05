@@ -104,6 +104,7 @@ Tips：编译通过，import模块报错
 ```
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
+此处还会影响到pycharm中的本地调用远程服务器开发，因为环境变量问题导致远程终端直接运行成功，而在本地pycharm调用远程服务器运行时出现importError的问题；解决方法就是在pycharm的Run-->edit configuration --> environment variable中添加LD_LIBRARY_PATH变量，值为/usr/local/lib:$LD_LIBRARY_PATH，注意，此处千万不要用echo去查看$LD_LIBRARY_PATH然后直接赋给它！！！
 
 （2）ImportError: ./hello.so: undefined symbol: _ZNK5boost6python7objects21py_function_impl_base9max_arityEv 
 

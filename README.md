@@ -12,6 +12,7 @@ It's my learning note including RL, Python, and everything.
 5、win10+python3.6+vs2015+boost实现c++封装成python模块方法；
 
 6、本地pycharm调用远程服务器开发配置说明；
+    
     tips:文件里描述的方法有一处需要说明，就是能够进行转发本地显示画图结果的前提是能够进行x11forward相关服务，这个可以找到一些方法；对于远程服务器环境          变量中没有$DISPLAY的情况，通过export进行指定可能起不到效果，这种情况下是可以进行savefig的，只不过matplotlib使用的backend要改，亲测改为matplotlib.use('Agg')可以成功保存图片。
 
 7、windows下 vs code 本地解释器调用远程服务器
